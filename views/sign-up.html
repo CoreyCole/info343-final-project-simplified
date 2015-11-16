@@ -5,11 +5,13 @@
             <p>Our services are awesome, but you must be 13 years old to join</p>
             <p class="validation-error">* indicates a required field</p>
             <div class="form-group">
-                <label for="emailInp">Email</label>
-                <p class="validation-error"
-                   ng-if="signUpForm.emailInp.$error.required">*</p>
-                <input id="emailInp" name="emailInp" type="text" class="form-control"
-                       ng-model="user.email" required autofocus />
+                <label for="verifyEmailInp">Email</label>
+                <input id="emailInp" name="verifyEmailInp" type="email" class="form-control"
+                       ng-model="email.text" placeholder="email address" required autofocus />
+                <p class="validation-error email-required-error"
+                   ng-if="signUpForm.verifyEmailInp.$error.required">Email is required.</p>
+                <p class="validation-error valid-required-error"
+                   ng-if="signUpForm.verifyEmailInp.$error.email">This is an invalid email address.</p> 
             </div>
             <div class="form-group">
                 <label for="fnameInp">First Name</label>
