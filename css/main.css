@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Slabo+13px);
+
+html, body{
+    font-family: 'Slabo 13px', sans-serif;
+    color: #FFF;
+}
+
+.info-div h1{
+    font-size: 20px;
+    /*padding-left: 15px;*/
+}
+
+.info-div p{
+    font-size: 10px;
+    /*padding-left: 15px;*/
+}
+
+@media (min-width: 768px){
+    body{
+        background-image: url(../img/background.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .info-div{
+        width: 400px;
+        margin: 0;
+        float: left;
+
+    }
+
+    .info-div h1{
+        font-size: 30px;
+    }
+
+    .info-div p{
+        font-size: 18px;
+    }
+
+    .container{
+        margin-left: 40px;
+    }
+
+}

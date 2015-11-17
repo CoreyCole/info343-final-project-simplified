@@ -3,7 +3,7 @@
         <div class="info-div">
             <h1>Sign Up</h1>
             <p>Our services are awesome, but you must be 13 years old to join</p>
-            <p class="validation-error">* indicates a required field</p>
+            <p class="validation-error">All fields are required</p>
             <div class="form-group">
                 <label for="verifyEmailInp">Email</label>
                 <input id="emailInp" name="verifyEmailInp" type="email" class="form-control"
@@ -15,22 +15,32 @@
             </div>
             <div class="form-group">
                 <label for="fnameInp">First Name</label>
-                <p class="validation-error"
-                   ng-if="signUpForm.fnameInp.$error.required">*</p>
-                <input id="fnameInp" name="fnameInp" type="text" class="form-control"
-                       ng-model="user.fname" required />
+                <p class="validation-error" id="fNameError"
+                   ng-if="signUpForm.fnameInp.$touched && signUpForm.fnameInp.$error.required">You must enter a last name!</p>
+
+                <p class="validation-error" id="fNamePatternError"
+                   ng-if="signUpForm.fnameInp.$touched && signUpForm.fnameInp.$error.pattern">No numbers allowed</p>
+
+                <input id="fnameInp" name="fnameInp" type="text" class="form-control" ng-minlength="1"
+                       pattern="[A-Za-z]+" ng-model="user.fname" required />
             </div>
+
             <div class="form-group">
                 <label for="lnameInp">Last Name</label>
-                <p class="validation-error"
-                   ng-if="signUpForm.lnameInp.$error.required">*</p>
-                <input id="lnameInp" name="lnameInp" type="text" class="form-control"
-                       ng-model="user.lname" required />
+                <p class="validation-error" id="lNameError"
+                   ng-if="signUpForm.lnameInp.$touched && signUpForm.lnameInp.$error.required">You must enter a first name!</p>
+
+                <p class="validation-error" id="lNamePatternError"
+                   ng-if="signUpForm.lnameInp.$touched && signUpForm.lnameInp.$error.pattern">No numbers allowed</p>
+
+                <input id="lnameInp" name="lnameInp" type="text" class="form-control" ng-minlength="1"
+                       pattern="[A-Za-z]+" ng-model="user.lname" required />
             </div>
+
             <div class="form-group">
                 <label for="birthdateInp">Birthdate</label>
                 <p class="validation-error"
-                   ng-if="signUpForm.birthdateInp.$error.required">*</p>
+                   ng-if="signUpForm.birthdateInp.$error.required"></p>
                 <input id="birthdateInp" name="birthdateInp" type="text" class="form-control"
                        ng-model="user.birthdate"
                        required check-birthdate/>
@@ -47,7 +57,7 @@
             <div class="form-group">
                 <label for="password1Inp">Password</label>
                 <p class="validation-error"
-                   ng-if="signUpForm.password1Inp.$error.required">*</p>
+                   ng-if="signUpForm.password1Inp.$error.required"></p>
                 <input id="password1Inp" name="password1Inp" type="password" class="form-control"
                         ng-model="user.password"
                         required>
@@ -59,7 +69,7 @@
             <div class="form-group">
                 <label for="password2Inp">Password Confirm</label>
                 <p class="validation-error"
-                   ng-if="signUpForm.password2Inp.$error.required">*</p>
+                   ng-if="signUpForm.password2Inp.$error.required"></p>
                 <input id="password2Inp" name="password2Inp" type="password" class="form-control"
                        ng-model="user.confirm"
                        passwords-match="user.password"
@@ -74,11 +84,14 @@
                     Your passwords must match! Please re-enter your password.
                 </p>
             </div>
-        </div>
 
-        <div class="form-group">
-            <button type=submit class="btn btn-primary btn-large"
-                    ng-disabled="signUpForm.$invalid">Sign Up</button>
+            <div class="form-group">
+                <button type=submit class="btn btn-primary btn-large submit"
+                        ng-disabled="signUpForm.$invalid"
+                        ng-click="saveUser()">Sign Up</button>
+            </div>
+
         </div>
     </form>
 </section>
+

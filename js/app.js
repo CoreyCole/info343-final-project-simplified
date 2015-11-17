@@ -4,7 +4,7 @@
  ui.router -> ui routing
  */
 
-angular.module('BellhappApp', ['ui.router'])
+angular.module('BellhappApp', ['ui.router', 'firebase'])
     .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('sign-up', {
@@ -16,6 +16,11 @@ angular.module('BellhappApp', ['ui.router'])
         //default if something weird is typed in
         $urlRouterProvider.otherwise('/sign-up');
     })
+    .controller('SignUpController', function($scope) {
+        $scope.SignUp = function() {
+            alert("submit");
+        };
+    });
     .directive('checkBirthdate', function() {
         return {
             require: 'ngModel',
@@ -41,7 +46,3 @@ angular.module('BellhappApp', ['ui.router'])
             }
         }
     })
-    .controller('SignUpController', function($scope) {
-
-
-    });
