@@ -9,8 +9,6 @@ describe('the sign up page app', function() {
     var lNameError = element(by.id('lNameError'));
     var lNamePatternError = element(by.id('lNamePatternError'));
 
-    var birthdate = element(by.id('birthdateInp'))
-
 
     beforeEach(function() {
         browser.get('http://localhost:8000/');
@@ -31,7 +29,7 @@ describe('the sign up page app', function() {
 
     it('must enter last name', function(){
         lName.click();
-        birthdate.click();
+        fName.click();
         expect(lNameError.isPresent()).toEqual(true);
         lName.click();
         lName.sendKeys('Huang');
@@ -50,5 +48,19 @@ describe('the sign up page app', function() {
         lName.sendKeys('123');
         fName.click();
         expect(lNamePatternError.isPresent()).toEqual(true);
+    });
+
+    it('first name is valid', function(){
+        expect(fNameError.isPresent()).toEqual(false);
+        fName.sendKeys('Morgan');
+        lName.click();
+        expect(fNameError.isPresent()).toEqual(false);
+    });
+
+    it('last name is valid', function(){
+        expect(lNameError.isPresent()).toEqual(false);
+        lName.sendKeys('Evans');
+        fName.click();
+        expect(lNameError.isPresent()).toEqual(false);
     });
 });
