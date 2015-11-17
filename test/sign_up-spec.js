@@ -89,9 +89,6 @@ describe('the sign up page app', function() {
         expect(lNameError.isPresent()).toEqual(false);
     });
 
-    it('should initialize to model', function() {
-		expect(input.getAttribute('placeholder')).toEqual('email address');
-	});
 
     it('should accept a valid email address', function() {
 	    input.sendKeys('sdf;lskj');
