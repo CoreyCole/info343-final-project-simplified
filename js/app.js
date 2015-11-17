@@ -18,9 +18,10 @@ angular.module('BellhappApp', ['ui.router', 'firebase'])
     })
     .controller('SignUpController', function($scope) {
         $scope.SignUp = function() {
-            alert("submit");
+            $scope.success = true;
         };
-    });
+    })
+
     .directive('checkBirthdate', function() {
         return {
             require: 'ngModel',
