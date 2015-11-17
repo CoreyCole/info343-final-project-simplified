@@ -10,10 +10,10 @@
                 <label for="verifyEmailInp">Email</label>
 
                 <p class="validation-error email-required-error"
-                   ng-if="signUpForm.verifyEmailInp.$touched && signUpForm.verifyEmailInp.$error.required">Email is required.</p>
+                   ng-if="signUpForm.verifyEmailInp.$error.required">Email is required.</p>
 
                 <p class="validation-error valid-required-error"
-                   ng-if="signUpForm.verifyEmailInp.$touched && signUpForm.verifyEmailInp.$error.email">This is an invalid email address.</p>
+                   ng-if="signUpForm.verifyEmailInp.$error.email">This is an invalid email address.</p>
 
                 <input id="verifyEmailInp" name="verifyEmailInp" type="email" class="form-control"
                        ng-model="email.text" required autofocus />
@@ -48,15 +48,15 @@
                 <label for="birthdateInp">Birthdate (dd/mm/yyyy)</label>
 
                 <p class="validation-error"
-                   ng-if="signUpForm.birthdateInp.$touched && signUpForm.birthdateInp.$error.required"></p>
+                   ng-if="signUpForm.birthdateInp.$error.required"></p>
 
                 <p class="validation-error"
-                   ng-if="signUpForm.birthdateInp.$touched && signUpForm.birthdateInp.$dirty &&
+                   ng-if="signUpForm.birthdateInp.$dirty &&
                 signUpForm.birthdateInp.$error.required" id="dobReqAlert">
                     Please enter your date of birth.
                 </p>
 
-                <p class="validation-error" ng-if="signUpForm.birthdateInp.$touched && signUpForm.birthdateInp.$dirty &&
+                <p class="validation-error" ng-if="signUpForm.birthdateInp.$dirty &&
                 signUpForm.birthdateInp.$error.checkBirthdate" id="dobValidAlert">
                     Sorry! You're not old enough. Please come back when you're at least 13 years old.
                 </p>
@@ -70,13 +70,13 @@
             <div class="form-group">
                 <label for="password1Inp">Password</label>
                 <p class="validation-error"
-                   ng-if="signUpForm.password1Inp.$touched && signUpForm.password1Inp.$error.required"></p>
+                   ng-if="signUpForm.password1Inp.$error.required"></p>
 
                 <input id="password1Inp" name="password1Inp" type="password" class="form-control"
                         ng-model="user.password"
                         required>
 
-                <p id="passwordReqError" class="validation-error" ng-if="signUpForm.password1Inp.$touched && signUpForm.password1Inp.$dirty &&
+                <p id="passwordReqError" class="validation-error" ng-if="signUpForm.password1Inp.$dirty &&
                         signUpForm.password1Inp.$error.required">
                     Please enter a password.
                 </p>
@@ -86,16 +86,16 @@
             <div class="form-group">
                 <label for="password2Inp">Password Confirm</label>
                 <p class="validation-error"
-                   ng-if="signUpForm.password2Inp.$touched && signUpForm.password2Inp.$error.required"></p>
+                   ng-if="signUpForm.password2Inp.$error.required"></p>
                 <input id="password2Inp" name="password2Inp" type="password" class="form-control"
                        ng-model="user.confirm"
                        passwords-match="user.password"
                        required>
-                <p id="password2InpReqError" class="validation-error" ng-if=" signUpForm.password2Inp.$touched && signUpForm.password2Inp.$dirty &&
+                <p id="password2InpReqError" class="validation-error" ng-if="signUpForm.password2Inp.$dirty &&
                         signUpForm.password2Inp.$error.required">
                     Please confirm your password.
                 </p>
-                <p id="passwordsMatchError" class="validation-error" ng-if="signUpForm.password2Inp.$touched &&
+                <p id="passwordsMatchError" class="validation-error" ng-if="
                         signUpForm.password2Inp.$dirty &&
                         signUpForm.password2Inp.$error.passwordsMatch &&
                         !signUpForm.password2Inp.$error.required">
