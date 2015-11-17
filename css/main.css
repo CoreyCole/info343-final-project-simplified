@@ -2,6 +2,7 @@
 
 html, body{
     font-family: 'Slabo 13px', sans-serif;
+    color: #FFF;
 }
 
 .info-div h1{
@@ -16,14 +17,16 @@ html, body{
 
 @media (min-width: 768px){
     body{
-        background-image: url(..img/background.jpg);
+        background-image: url(../img/background.jpg);
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .info-div{
-        width: 50%;
+        width: 400px;
         margin: 0;
+        float: left;
+
     }
 
     .info-div h1{
@@ -32,6 +35,10 @@ html, body{
 
     .info-div p{
         font-size: 18px;
+    }
+
+    .container{
+        margin-left: 40px;
     }
 
 }
