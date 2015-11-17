@@ -3,6 +3,10 @@
 html, body{
     font-family: 'Slabo 13px', sans-serif;
     color: #FFF;
+    background-image: url(../img/mobile-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #F54535;
 }
 
 .info-div h1{
@@ -12,11 +16,16 @@ html, body{
 
 .info-div p{
     font-size: 10px;
-    /*padding-left: 15px;*/
+    color: #FFF;
+}
+
+.validation-error{
+    font-size: 16px;
+    color: #FFF;
 }
 
 @media (min-width: 768px){
-    body{
+    html, body{
         background-image: url(../img/background.jpg);
         background-size: cover;
         background-repeat: no-repeat;
@@ -30,15 +39,27 @@ html, body{
     }
 
     .info-div h1{
-        font-size: 30px;
+        font-size: 48px;
+        color: #FFF;
     }
 
-    .info-div p{
-        font-size: 18px;
+    #description{
+        font-size: 20px;
+        color: #FFF;
     }
 
     .container{
         margin-left: 40px;
     }
+
+    .validation-error, .info-div p{
+        font-size: 14px;
+        color: #ED732D;
+    }
+
+    label{
+        color: #FFF;
+    }
+
 
 }
