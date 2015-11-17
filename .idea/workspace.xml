@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5b60cbfd-8f56-429c-aa32-c7c0cd8db9ff" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/sign-up.html" afterPath="$PROJECT_DIR$/views/sign-up.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/sign_up-spec.js" afterPath="$PROJECT_DIR$/test/sign_up-spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="info343-final-project-simplified.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,8 +48,8 @@
       <file leaf-file-name="sign-up.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/sign-up.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.018726591">
-              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.2247191">
+              <caret line="12" column="69" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -401,8 +399,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/sign-up.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.018726591">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.2247191">
+          <caret line="12" column="69" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="69" />
           <folding />
         </state>
       </provider>
